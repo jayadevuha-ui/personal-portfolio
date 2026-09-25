@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Portfolio of Kurasala Jayadeva Satyavamsi — machine learning, data science and practical AI projects." />
+  <meta name="description" content="Portfolio of Kurasala Jayadeva Satyavamsi — data science, analytics, forecasting and machine learning projects." />
   <meta name="theme-color" content="#080b10" />
-  <title>Satyavamsi — ML & Data Science</title>
+  <title>Satyavamsi — Data Science & Analytics</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -29,34 +29,34 @@
           <a class="text-link" href="https://github.com/jayadevuha-ui" target="_blank" rel="noreferrer">Explore GitHub <span>↗</span></a>
         </div>
         <div class="hero-metrics">
-          <div><strong>30K</strong><span>records in flagship project</span></div>
-          <div><strong>0.780</strong><span>test ROC-AUC</span></div>
-          <div><strong>Live</strong><span>deployed ML app</span></div>
+          <div><strong>30K</strong><span>credit records analyzed</span></div>
+          <div><strong>541K</strong><span>retail transactions explored</span></div>
+          <div><strong>2</strong><span>live data products</span></div>
         </div>
       </div>
 
       <div class="hero-panel" aria-hidden="true">
         <div class="code-window">
           <div class="window-bar"><i></i><i></i><i></i><span>pipeline.py</span></div>
-          <pre><code><span class="muted"># model selection</span>
-models = [
-  "LogisticRegression",
-  "RandomForest",
-  "HistGradientBoosting",
-  "XGBoost"
-]
+          <pre><code><span class="muted"># data-to-decision workflow</span>
+clean = prepare(raw_data)
 
-best = select_by_cv(
-  metric=<span class="accent">"roc_auc"</span>,
-  folds=<span class="accent">5</span>
+insights = analyze(
+  clean,
+  metrics=<span class="accent">"business"</span>
 )
 
-deploy(best)</code></pre>
+forecast = backtest(
+  clean,
+  horizon=<span class="accent">42</span>
+)
+
+publish(insights, forecast)</code></pre>
         </div>
         <div class="floating-card">
-          <span>Selected model</span>
-          <strong>HistGradientBoosting</strong>
-          <small>5-fold CV + held-out test</small>
+          <span>Current portfolio</span>
+          <strong>Analytics + Forecasting + ML</strong>
+          <small>From raw data to live products</small>
         </div>
       </div>
     </section>
@@ -115,14 +115,53 @@ deploy(best)</code></pre>
           <p class="responsible-note">Educational portfolio project based on historical UCI data; not a production lending decision system.</p>
         </div>
       </article>
+
+      <article class="project-card">
+        <a class="project-preview forecast-preview" href="https://retail-sales-forecasting-intelligence-3gt7qsyapxmpho4w7rquft.streamlit.app" target="_blank" rel="noreferrer">
+          <div class="preview-topbar"><span>Retail Sales Forecasting Intelligence</span><span class="preview-live">● LIVE</span></div>
+          <div class="preview-body">
+            <div class="preview-copy">
+              <small>Analytics + Time Series</small>
+              <h4>Retail Revenue Forecasting</h4>
+              <p>Transaction analytics and chronological forecasting across more than half a million retail records.</p>
+            </div>
+            <div class="forecast-lines">
+              <span></span><span></span>
+            </div>
+            <div class="preview-stats">
+              <div><small>Transactions</small><strong>541K</strong></div>
+              <div><small>MAE</small><strong>£14.9K</strong></div>
+              <div><small>Horizon</small><strong>42 days</strong></div>
+            </div>
+          </div>
+          <span class="open-app">Open live app ↗</span>
+        </a>
+        <div class="project-content">
+          <div class="project-topline"><span class="project-number">PROJECT 02</span><span class="live-badge"><i></i> LIVE</span></div>
+          <h3>Retail Sales Forecasting Intelligence</h3>
+          <p>Business analytics and time-series forecasting using the UCI Online Retail dataset. Cleans 541,909 transactions, analyzes revenue patterns, engineers lag and rolling features, and evaluates forecasts on a 42-day chronological holdout.</p>
+          <div class="metric-row">
+            <div><span>Transactions</span><strong>541K</strong></div>
+            <div><span>MAE</span><strong>£14.9K</strong></div>
+            <div><span>RMSE</span><strong>£27.9K</strong></div>
+            <div><span>MAPE</span><strong>26.3%</strong></div>
+          </div>
+          <div class="tags"><span>Python</span><span>Time Series</span><span>pandas</span><span>scikit-learn</span><span>Streamlit</span><span>Analytics</span></div>
+          <div class="project-actions">
+            <a class="primary-button small" href="https://retail-sales-forecasting-intelligence-3gt7qsyapxmpho4w7rquft.streamlit.app" target="_blank" rel="noreferrer">Live demo ↗</a>
+            <a class="secondary-button small" href="https://github.com/jayadevuha-ui/retail-sales-forecasting-intelligence" target="_blank" rel="noreferrer">Source code ↗</a>
+          </div>
+          <p class="responsible-note">The 7-day seasonal baseline beat the more complex ML models on MAE and RMSE, showing why strong forecasting baselines matter.</p>
+        </div>
+      </article>
     </section>
 
     <section class="section skills" id="skills">
       <div class="section-label">03 / SKILLS</div>
       <div class="skills-grid">
-        <div class="skill-block"><span>Machine Learning</span><h3>Modeling & evaluation</h3><p>Classification, cross-validation, threshold tuning, ROC/PR analysis and feature importance.</p></div>
-        <div class="skill-block"><span>Data Science</span><h3>Data & experimentation</h3><p>Pandas, NumPy, exploratory analysis, preprocessing and reproducible experiment design.</p></div>
-        <div class="skill-block"><span>Engineering</span><h3>Deployment & workflow</h3><p>Streamlit, GitHub, GitHub Actions, model serialization and technical documentation.</p></div>
+        <div class="skill-block"><span>Analytics</span><h3>Insights & visualization</h3><p>Exploratory analysis, KPI thinking, data cleaning, visualization and clear communication of findings.</p></div>
+        <div class="skill-block"><span>Data Science</span><h3>Statistics & forecasting</h3><p>Feature engineering, statistical reasoning, time-series analysis, forecasting and experiment design.</p></div>
+        <div class="skill-block"><span>Machine Learning</span><h3>Modeling & deployment</h3><p>Classification, regression, cross-validation, tuning, explainability, Streamlit and reproducible workflows.</p></div>
       </div>
       <div class="tool-marquee"><span>Python</span><span>SQL</span><span>pandas</span><span>NumPy</span><span>Matplotlib</span><span>scikit-learn</span><span>XGBoost</span><span>Time Series</span><span>Streamlit</span><span>Git</span></div>
     </section>
